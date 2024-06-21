@@ -1,0 +1,16 @@
+{
+  "pages": {
+    "/session/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/session/page.css",
+      "static/chunks/app/session/page.js"
+    ],
+    "/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/layout.css",
+      "static/chunks/app/layout.js"
+    ]
+  }
+}
