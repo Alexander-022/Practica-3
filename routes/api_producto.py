@@ -17,10 +17,13 @@ schema = {
         "nombre": {"type": "string"},
         "precio": {"type": "string"},
         "cantidad": {"type": "string"},
+        "nombre_sucursal": {"type": "string"},
+        "longitd": {"type": "string"},
+        "latitud": {"type": "string"},
         
         
     },
-    "required": ["nombre", "precio", "cantidad"],
+    "required": ["nombre", "precio", "cantidad", "nombre_sucursal", "longitd", "latitud"],
 }
 
 schema_session = {

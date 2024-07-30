@@ -33,6 +33,14 @@ class ProductoController:
     #         return  persona.id
     #     else:
     #         return -1
+
+    id = db.Column(db.Integer, primary_key = True)
+    nombre = db.Column(db.String(100))
+    precio = db.Column(db.String(100))
+    cantidad = db.Column(db.String(100))
+    nombre_sucursal = db.Column(db.String(100))
+    longitud = db.Column(db.String(100))
+    latitud = db.Column(db.String(100))
         
     def guardar_Producto(self, data):
 
@@ -42,6 +50,9 @@ class ProductoController:
         producto.nombre = data["nombre"]
         producto.precio = data["precio"]
         producto.cantidad = data["cantidad"]
+        producto.nombre_sucursal = data["nombre_sucursal"]
+        producto.longitud = data["longuitud"]
+        producto.latitud = data["latitud"]
 
         
        

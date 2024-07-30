@@ -10,7 +10,10 @@ class LoteProducto(db.Model):
     cantidad = db.Column(db.String(100))
     estado = db.Column(db.Enum(TipoEstado))
     descripcion = db.Column(db.String(100))
-    imagen_url = db.Column(db.String(120), nullable=True)
+    nombre_sucursal = db.Column(db.String(100))
+    longitud = db.Column(db.String(100))
+    latitud = db.Column(db.String(100))
+    
     
     #civilstatus = db.Column(db.Enum(TypeStatus))
     external_id = db.Column(db.VARCHAR(60), default=str(uuid.uuid4()))
@@ -28,6 +31,9 @@ class LoteProducto(db.Model):
             'cantidad': self.cantidad,
             'estado': self.estado,
             'descripcion': self.descripcion,
+            'nombre_sucuarsal': self.nombre_sucursal,
+            'longitud': self.longitud,
+            'latitud': self.latitud,
             'external_id': self.external_id,
         } 
     

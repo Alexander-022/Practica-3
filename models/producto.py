@@ -7,6 +7,9 @@ class Producto(db.Model):
     nombre = db.Column(db.String(100))
     precio = db.Column(db.String(100))
     cantidad = db.Column(db.String(100))
+    nombre_sucursal = db.Column(db.String(100))
+    longitud = db.Column(db.String(100))
+    latitud = db.Column(db.String(100))
    
     
    
@@ -26,5 +29,8 @@ class Producto(db.Model):
             'nombre': self.nombre,
             'precio': self.precio,
             'cantidad': self.cantidad,
+            'nombre_sucuarsal': self.nombre_sucursal,
+            'longitud': self.longitud,
+            'latitud': self.latitud,
             'external_id': self.external_id,
         }    

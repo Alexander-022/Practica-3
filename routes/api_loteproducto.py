@@ -39,9 +39,11 @@ schema = {
             "enum": ["Bueno", "Al_caducar", "Caducado", "No_disponible"]
         },
         "descripcion": {"type": "string"},
-        "imagen_url": {"type": "string"}
+        "nombre_sucursal": {"type": "string"},
+        "longitud": {"type": "string"},
+        "latitud": {"type": "string"},
     },
-    "required": ["nombre", "fecha_fab", "fecha_ven", "cantidad", "estado", "descripcion", "imagen_url"]
+    "required": ["nombre", "fecha_fab", "fecha_ven", "cantidad", "estado", "descripcion", "nombre_sucursal", "longitud", "latitud"]
 }
 
 schema_up = {
@@ -66,7 +68,8 @@ def list():
     for data in serialized_data:
         data['estado'] = str(data['estado'])
     return make_response(
-        jsonify({"msg":"OK", "code":200, "data": serialized_data}),
+        
+        jsonify({"msg":"OK", "code":200, "datos": serialized_data}),
         200
     )
 
@@ -171,8 +174,7 @@ def updateimg():
         )
 
 
-if __name__ == '__main__':
-    app.run(debug=True)
+
 #@api_loteproducto.route("/loteproducto/save", methods=["POST"])
 #@token_require
 #@expects_json(schema)

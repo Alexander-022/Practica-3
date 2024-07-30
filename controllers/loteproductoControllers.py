@@ -53,7 +53,10 @@ class LoteProductoController:
         l_producto.cantidad = data["cantidad"]
         l_producto.estado = data["estado"]
         l_producto.descripcion = data["descripcion"]
-        l_producto.imagen_url = data["imagen_url"]
+        l_producto.nombre_sucursal = data["nombre_sucursal"]
+        l_producto.longitud = data["longitud"]
+        l_producto.latitud = data["latitud"]
+        
         l_producto.external_id = uuid.uuid4()
 
         db.session.add(l_producto)
